@@ -42,6 +42,8 @@ function isPalindrome(str) {
             
             if(month == 2 && day > 28) continue;
             
+            if(month %2==0 && day > 30 && month != 8) continue;
+            
             if(isPalindrome(`${singleday}${singlemonth}${year}`)){
                 palindromeDates.push(`${singleday}-${singlemonth}-${year}`)
             }
